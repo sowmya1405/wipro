@@ -11,6 +11,7 @@ class Author {
         this.gender = gender;
     }
 
+    // Getters
     public String getName() {
         return name;
     }
@@ -23,6 +24,7 @@ class Author {
         return gender;
     }
 
+    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -49,39 +51,76 @@ public class Book {
         this.qtyInStock = qtyInStock;
     }
 
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQtyInStock() {
+        return qtyInStock;
+    }
+
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setQtyInStock(int qtyInStock) {
+        this.qtyInStock = qtyInStock;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // Author Details
         System.out.print("Enter Author Name: ");
         String authorName = sc.nextLine();
 
         System.out.print("Enter Author Email: ");
         String email = sc.nextLine();
 
-        System.out.print("Enter Gender (M/F): ");
+        System.out.print("Enter Author Gender (M/F): ");
         char gender = sc.next().charAt(0);
 
-        sc.nextLine();
+        sc.nextLine(); // Consume newline
 
+        // Book Details
         System.out.print("Enter Book Name: ");
         String bookName = sc.nextLine();
 
-        System.out.print("Enter Price: ");
+        System.out.print("Enter Book Price: ");
         double price = sc.nextDouble();
 
-        System.out.print("Enter Quantity: ");
+        System.out.print("Enter Quantity in Stock: ");
         int qty = sc.nextInt();
 
+        // Create Objects
         Author author = new Author(authorName, email, gender);
         Book book = new Book(bookName, author, price, qty);
 
-        System.out.println("\nBook Details");
-        System.out.println("Book Name: " + book.name);
-        System.out.println("Price: " + book.price);
-        System.out.println("Quantity: " + book.qtyInStock);
-        System.out.println("Author Name: " + author.getName());
-        System.out.println("Author Email: " + author.getEmail());
-        System.out.println("Author Gender: " + author.getGender());
+        System.out.println("\n===== Book Details =====");
+        System.out.println("Book Name       : " + book.getName());
+        System.out.println("Price           : " + book.getPrice());
+        System.out.println("Quantity        : " + book.getQtyInStock());
+        System.out.println("Author Name     : " + book.getAuthor().getName());
+        System.out.println("Author Email    : " + book.getAuthor().getEmail());
+        System.out.println("Author Gender   : " + book.getAuthor().getGender());
 
         sc.close();
     }
