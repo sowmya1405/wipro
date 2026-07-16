@@ -1,4 +1,5 @@
-class Employee {
+package EmployeeeManagement;
+class Employeee {
     int empNo;
     String empName;
     String joinDate;
@@ -8,7 +9,7 @@ class Employee {
     int hra;
     int it;
 
-    Employee(int empNo, String empName, String joinDate, char desCode,
+    Employeee(int empNo, String empName, String joinDate, char desCode,
              String department, int basic, int hra, int it) {
 
         this.empNo = empNo;

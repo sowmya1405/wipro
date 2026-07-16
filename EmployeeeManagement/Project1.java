@@ -1,15 +1,16 @@
+package EmployeeeManagement;
 public class Project1 {
 
     public static void main(String args[]) {
 
-        Employee emp[] = {
-            new Employee(1001,"Ashish","01/04/2009",'e',"R&D",20000,8000,3000),
-            new Employee(1002,"Sushma","23/08/2012",'c',"PM",30000,12000,9000),
-            new Employee(1003,"Rahul","12/11/2008",'k',"Acct",10000,8000,1000),
-            new Employee(1004,"Chahat","29/01/2013",'r',"Front Desk",12000,6000,2000),
-            new Employee(1005,"Ranjan","16/07/2005",'m',"Engg",50000,20000,20000),
-            new Employee(1006,"Suman","01/01/2000",'e',"Manufacturing",23000,9000,4400),
-            new Employee(1007,"Tanmay","12/06/2006",'c',"PM",29000,12000,10000)
+        Employeee emp[] = {
+            new Employeee(1001,"Ashish","01/04/2009",'e',"R&D",20000,8000,3000),
+            new Employeee(1002,"Sushma","23/08/2012",'c',"PM",30000,12000,9000),
+            new Employeee(1003,"Rahul","12/11/2008",'k',"Acct",10000,8000,1000),
+            new Employeee(1004,"Chahat","29/01/2013",'r',"Front Desk",12000,6000,2000),
+            new Employeee(1005,"Ranjan","16/07/2005",'m',"Engg",50000,20000,20000),
+            new Employeee(1006,"Suman","01/01/2000",'e',"Manufacturing",23000,9000,4400),
+            new Employeee(1007,"Tanmay","12/06/2006",'c',"PM",29000,12000,10000)
         };
 
         if(args.length==0){
@@ -20,7 +21,7 @@ public class Project1 {
         int id = Integer.parseInt(args[0]);
         boolean found = false;
 
-        for(Employee e : emp){
+        for(Employeee e : emp){
 
             if(e.empNo == id){
 
