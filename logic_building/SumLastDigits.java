@@ -10,5 +10,6 @@ public class SumLastDigits {
         int sum = Math.abs(a % 10) + Math.abs(b % 10);
 
         System.out.println(sum);
+        sc.close();
     }
 }

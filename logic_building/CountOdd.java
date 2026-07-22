@@ -13,5 +13,6 @@ public class CountOdd {
         }
 
         System.out.println(count);
+        sc.close();
     }
 }

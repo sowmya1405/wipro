@@ -7,5 +7,6 @@ public class LastDigit {
         int n = sc.nextInt();
 
         System.out.println(Math.abs(n % 10));
+        sc.close();
     }
 }

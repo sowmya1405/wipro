@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class CountEven {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -13,5 +12,6 @@ public class CountEven {
         }
 
         System.out.println(count);
+        sc.close();
     }
 }

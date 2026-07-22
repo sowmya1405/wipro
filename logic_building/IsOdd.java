@@ -10,5 +10,6 @@ public class IsOdd {
             System.out.println("Odd");
         else
             System.out.println("Even");
+        sc.close();
     }
 }

@@ -11,5 +11,6 @@ public class ExactMultiple {
             System.out.println("Yes");
         else
             System.out.println("No");
+        sc.close();
     }
 }

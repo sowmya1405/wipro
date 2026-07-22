@@ -22,5 +22,6 @@ public class IsPrime {
             System.out.println("Prime");
         else
             System.out.println("Not Prime");
+        sc.close();
     }
 }
